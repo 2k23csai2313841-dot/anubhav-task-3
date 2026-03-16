@@ -19,7 +19,7 @@ export default async function handler(req, res) {
     let pendingTasks = tasks.filter((t) => !t.done);
 
     // Check if today is Saturday and add LeetCode Contest
-    if (today.getDay() === 1) {
+    if (today.getDay() === 6) {
       const leetCodeTask = { text: "LeetCode Contest", done: false };
       if (!pendingTasks.find((t) => t.text === "LeetCode Contest")) {
         pendingTasks.push(leetCodeTask);
